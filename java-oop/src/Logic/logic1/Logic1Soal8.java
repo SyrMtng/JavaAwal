@@ -1,18 +1,22 @@
-package Logic;
+package Logic.logic1;
 
-public class Logic1Soal3 extends BasicLogic{
-    public Logic1Soal3(int n){
+import Logic.BasicLogic;
+
+public class Logic1Soal8 extends BasicLogic {
+    public Logic1Soal8(int n){
         super(n);
     }
     public void isiArray(){
-        int a = 0;
+        char a = 'A';
+        int b = 2;
         for (int i = 0; i < this.n; i++) {
-            if (i<=0){
+            if(i % 2 == 0){
                 this.array[0][i]= String.valueOf(a);
             }else {
-                int b = i * 2;
                 this.array[0][i]= String.valueOf(b);
+                b+=2;
             }
+            a++;
         }
     }
 
